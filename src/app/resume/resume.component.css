@@ -1,0 +1,149 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* contact */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.contact > div {
+  padding: 1em;
+  margin: auto;
+}
+.contact a {
+  text-align: center;
+  color: inherit;
+  text-decoration: inherit;
+  font-size: 1.1em;
+}
+
+#head {
+  margin: auto;
+  max-width: 980px;
+  text-align: center;
+  font-size: 4em;
+}
+
+/* main */
+.main {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-column-gap: 0.5em;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.main > div {
+  background: #f5fffc;
+  padding: 1em;
+}
+
+.main > div:nth-child(odd) {
+  background: #f3f3f8;
+}
+
+.icongrp,
+.left {
+  font-size: 2em;
+}
+
+.job h3 {
+  margin: 0px;
+}
+.summary p,
+.right h4 {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.line {
+  border-bottom: 1px lightgrey solid;
+}
+
+.lendingclub,
+.projects {
+  font-size: 0.6em;
+  margin-top: 25px;
+}
+#lc {
+  margin-bottom: 1em;
+}
+.time div {
+  color: rgb(139, 133, 190);
+  display: inline-block;
+  width: 49%;
+}
+.time > :nth-child(even) {
+  color: rgb(92, 81, 190);
+  text-align: right;
+  font-weight: bold;
+}
+.codingdojo > img,
+.santaclara > img {
+  max-width: 65%;
+}
+
+/* Skills */
+label {
+  vertical-align: top;
+}
+/* Frameworks */ /* Education */
+.frameworks,
+.other,
+#education {
+  font-size: 1.1em;
+}
+
+.left {
+  border-right: 1px lightgrey solid;
+}
+.fixed {
+  position: fixed;
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    display: block;
+  }
+
+  #Languages > h3,
+  label {
+    display: none;
+  }
+  #Languages,
+  h4,
+  .contact i {
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
+  }
+  #Languages img {
+    display: none;
+  }
+  .contact div {
+    display: inline-block;
+  }
+
+  .frameworks,
+  .other {
+    font-size: 1.5em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+  }
+
+  h2 {
+    margin: 0px;
+  }
+  #education {
+    justify-content: center;
+    background: rgb(241, 241, 241);
+    padding: 1em;
+  }
+}

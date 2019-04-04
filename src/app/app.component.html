@@ -1,21 +1,90 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- ********* Nav ********* -->
 
-<router-outlet></router-outlet>
+<!-- BUILDSIDE NAV AND TOP NAV W/ TOGGLE HERE -->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper blue darken-3 ">
+      <ul>
+        <li><a [routerLink]="['/']"> Main </a></li>
+        <li><a [routerLink]="['/resume']"> Resume </a></li>
+        <li><a [routerLink]="['/projects']"> Projects </a></li>
+        <!--
+          <li> <a [routerLink]="['/collaborate']" > Work with me </a></li>
+        -->
+        <li class="right" (click)="jumpToTop($event)"><a> Jump to Top</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<!-- ********* main router ********* -->
+
+<div class="main"><router-outlet></router-outlet></div>
+
+<!-- ********* Modal ********* -->
+
+<!-- Modal Open button -->
+<div class="row container center">
+  <a
+    class="waves-effect waves btn-large modal-trigger blue darken-3 circle"
+    (click)="modalOpen()"
+    (mouseenter)="modalOpen()"
+  >
+    Contact me
+  </a>
+</div>
+
+<!-- Modal Main -->
+<div
+  id="modal1"
+  class="modal bottom-sheet"
+  materialize="modal"
+  [materializeActions]="modalActions"
+>
+  <!-- content used for spacing -->
+  <div class="modal-content "><h4>Shawn Cannon-Williams</h4></div>
+
+  <div class="row center">
+    <!-- 1st contact card -->
+    <div class="col s12 l4">
+      <div class="card blue-grey darken-2">
+        <div class="card-content white-text">
+          <span class="card-title">
+            <a href="https://github.com/shawnpcw" target="_blank">
+              <i class="fab fa-github white-text"></i>
+              <span class="white-text"> Github</span></a
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2nd contact card -->
+    <div class="col s12 l4">
+      <div class="card blue-grey darken-2">
+        <div class="card-content white-text">
+          <span class="card-title">
+            <a href="https://www.linkedin.com/in/shawnpcw/" target="_blank ">
+              <i class="fab fa-linkedin white-text"></i
+              ><span class="white-text"> Linkedin</span></a
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3rd contact card -->
+    <div class="col s12 l4">
+      <div class="card blue-grey darken-2">
+        <div class="card-content white-text">
+          <span class="card-title">
+            <a href="mailto:s.cannon.williams@gmail.com">
+              <i class="far fa-envelope white-text"></i>
+              <span class="white-text"> s.cannon.williams@gmail.com</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

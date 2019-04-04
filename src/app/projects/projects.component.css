@@ -1,0 +1,19 @@
+.slider .slides {
+  background: white;
+}
+
+.slider .slides img {
+  background-position: top center;
+  background-repeat: no-repeat;
+  max-width: 80vw;
+  background-size: contain;
+}
+
+.currentprojects,
+slider {
+  margin-top: 10%;
+}
+
+.collapsible-header .projecttitle {
+  width: 100%;
+}

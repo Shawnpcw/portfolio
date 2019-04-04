@@ -1,14 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Public</title>
-  <base href="/">
+  <head>
+    <base href="/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+    <!-- Compiled and minified CSS -->
+    <link
+      href="http://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Font Awesome for contact icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+    <script>
+      (function() {
+        // Retrieve the URL the user was trying to access when receiving the 404.
+        var redirect = sessionStorage.redirect;
+        // Remove the URL from sessionStorage.
+        delete sessionStorage.redirect;
+        // Check if we actually need to redirect.
+        if (redirect && redirect != location.href) {
+          // We need to redirect to the URL the user was trying to access.
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <!-- /Github Pages hack. -->
+  </head>
+
+  <body>
+    <app-root></app-root>
+  </body>
 </html>
